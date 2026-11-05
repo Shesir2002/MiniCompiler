@@ -1,0 +1,6 @@
+int x = 5;
+double z=9;
+int y = 10;
+double result = x + y-z;
+
+print(result);

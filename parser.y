@@ -5,11 +5,12 @@
 }
 
 %{
-#include <cstdio>
-#include <cstdlib>
+#include <stdio.h>
+#include <stdlib.h>
 #include <iostream>
 #include <string>
 #include <utility>
+#include <vector>
 #include "ast.hpp"
 
 extern int yylex(void);
@@ -37,7 +38,7 @@ int syntax_errors = 0;
 %token <text> FLOAT_LITERAL
 %token <text> STRING_LITERAL
 
-%token INT FLOAT STRING BOOL
+%token INT FLOAT DOUBLE STRING BOOL
 %token IF ELSE DO WHILE PRINT
 %token TRUE FALSE
 %token EQ NE LE GE AND OR
@@ -126,6 +127,7 @@ declaration
 type
     : INT    { $$ = DataType::INT; }
     | FLOAT  { $$ = DataType::FLOAT; }
+    | DOUBLE  { $$ = DataType::DOUBLE; }
     | STRING { $$ = DataType::STRING; }
     | BOOL   { $$ = DataType::BOOL; }
     ;

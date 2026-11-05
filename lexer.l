@@ -36,6 +36,7 @@ FLOATNUM    {DIGIT}+"."{DIGIT}+
 "int"                       { return INT; }
 "float"                     { return FLOAT; }
 "string"                    { return STRING; }
+"double"                    { return DOUBLE; }
 "bool"                      { return BOOL; }
 "if"                        { return IF; }
 "else"                      { return ELSE; }

@@ -10,6 +10,7 @@ enum class DataType {
     INT,
     FLOAT,
     STRING,
+    DOUBLE,
     BOOL,
     UNKNOWN
 };
@@ -19,6 +20,7 @@ inline std::string dataTypeToString(DataType type) {
         case DataType::INT: return "int";
         case DataType::FLOAT: return "float";
         case DataType::STRING: return "string";
+        case DataType::DOUBLE: return "double";
         case DataType::BOOL: return "bool";
         default: return "unknown";
     }

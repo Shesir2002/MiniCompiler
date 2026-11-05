@@ -67,23 +67,24 @@ extern int yydebug;
     STRING_LITERAL = 261,          /* STRING_LITERAL  */
     INT = 262,                     /* INT  */
     FLOAT = 263,                   /* FLOAT  */
-    STRING = 264,                  /* STRING  */
-    BOOL = 265,                    /* BOOL  */
-    IF = 266,                      /* IF  */
-    ELSE = 267,                    /* ELSE  */
-    DO = 268,                      /* DO  */
-    WHILE = 269,                   /* WHILE  */
-    PRINT = 270,                   /* PRINT  */
-    TRUE = 271,                    /* TRUE  */
-    FALSE = 272,                   /* FALSE  */
-    EQ = 273,                      /* EQ  */
-    NE = 274,                      /* NE  */
-    LE = 275,                      /* LE  */
-    GE = 276,                      /* GE  */
-    AND = 277,                     /* AND  */
-    OR = 278,                      /* OR  */
-    UMINUS = 279,                  /* UMINUS  */
-    LOWER_THAN_ELSE = 280          /* LOWER_THAN_ELSE  */
+    DOUBLE = 264,                  /* DOUBLE  */
+    STRING = 265,                  /* STRING  */
+    BOOL = 266,                    /* BOOL  */
+    IF = 267,                      /* IF  */
+    ELSE = 268,                    /* ELSE  */
+    DO = 269,                      /* DO  */
+    WHILE = 270,                   /* WHILE  */
+    PRINT = 271,                   /* PRINT  */
+    TRUE = 272,                    /* TRUE  */
+    FALSE = 273,                   /* FALSE  */
+    EQ = 274,                      /* EQ  */
+    NE = 275,                      /* NE  */
+    LE = 276,                      /* LE  */
+    GE = 277,                      /* GE  */
+    AND = 278,                     /* AND  */
+    OR = 279,                      /* OR  */
+    UMINUS = 280,                  /* UMINUS  */
+    LOWER_THAN_ELSE = 281          /* LOWER_THAN_ELSE  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -92,7 +93,7 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 27 "parser.y"
+#line 28 "parser.y"
 
     char *text;
     DataType dataType;
@@ -100,7 +101,7 @@ union YYSTYPE
     Statement *stmt;
     std::vector<StmtPtr> *statements;
 
-#line 104 "parser.tab.h"
+#line 105 "parser.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

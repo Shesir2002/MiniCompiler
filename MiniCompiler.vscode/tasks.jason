@@ -1,0 +1,22 @@
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build MiniCompiler",
+            "type": "shell",
+            "command": [
+    "bison -Wall -d -o parser.tab.c parser.y",
+    "flex -o lex.yy.c lexer.l",
+    "g++ -std=c++17 -x c++ -c parser.tab.c -o parser.tab.o",
+    "g++ -std=c++17 -x c++ -c lex.yy.c -o lex.yy.o",
+    "g++ -std=c++17 -c main.cpp -o main.o",
+    "g++ -std=c++17 -o mini_compiler.exe main.o parser.tab.o lex.yy.o"
+],
+              "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

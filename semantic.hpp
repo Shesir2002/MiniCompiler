@@ -47,13 +47,16 @@ private:
     }
 
     bool isNumeric(DataType type) const {
-        return type == DataType::INT || type == DataType::FLOAT;
+        return type == DataType::INT || type == DataType::FLOAT || type == DataType::DOUBLE;
     }
 
     DataType promoteNumeric(DataType left, DataType right) const {
         if (!isNumeric(left) || !isNumeric(right)) {
             return DataType::UNKNOWN;
         }
+        if (left == DataType::DOUBLE || right == DataType::DOUBLE) {
+        return DataType::DOUBLE;
+    }
 
         if (left == DataType::FLOAT || right == DataType::FLOAT) {
             return DataType::FLOAT;
@@ -63,19 +66,28 @@ private:
     }
 
     bool canAssign(DataType target, DataType source) const {
-        if (target == DataType::UNKNOWN ||
-            source == DataType::UNKNOWN) {
-            return true;
-        }
-
-        if (target == source) {
-            return true;
-        }
-
-        // Allow automatic conversion from int to float.
-        return target == DataType::FLOAT &&
-               source == DataType::INT;
+    if (target == DataType::UNKNOWN ||
+        source == DataType::UNKNOWN) {
+        return true;
     }
+
+    if (target == source) {
+        return true;
+    }
+
+    if (target == DataType::FLOAT &&
+        source == DataType::INT) {
+        return true;
+    }
+
+    if (target == DataType::DOUBLE &&
+        (source == DataType::INT ||
+         source == DataType::FLOAT)) {
+        return true;
+    }
+
+    return false;
+}
 
     DataType checkExpression(const Expression* expr) {
         if (expr == nullptr) {
