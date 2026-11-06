@@ -1,0 +1,13 @@
+int count = 1;
+
+while (count <= 3) {
+    print(count);
+    count = count + 1;
+}
+
+int number = 1;
+
+do {
+    print(number);
+    number = number + 1;
+} while (number <= 3);

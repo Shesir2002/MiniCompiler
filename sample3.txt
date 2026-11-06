@@ -1,4 +1,11 @@
-int a = 10;
-int b = 3;
-int result = a + b * 2;
+int age = 20;
+int marks = 85;
+
+bool eligible = age >= 18;
+bool passed = marks >= 40;
+bool result = eligible && passed;
+
+print(eligible);
+print(passed);
 print(result);
+print(!result);

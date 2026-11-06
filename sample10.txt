@@ -1,0 +1,7 @@
+int age = 20;
+
+print(salary);
+
+int marks = "Hello";
+
+print(marks);

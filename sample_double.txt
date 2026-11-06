@@ -1,8 +1,0 @@
-int age = 20;
-float height = 5.5;
-double salary = 45000.75;
-string name = "Rayhan";
-bool status = true;
-
-double result = salary + 500.25;
-print(result);

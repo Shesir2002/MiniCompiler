@@ -1,0 +1,7 @@
+int marks = 75;
+
+if (marks >= 40) {
+    print("Passed");
+} else {
+    print("Failed");
+}

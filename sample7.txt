@@ -1,0 +1,6 @@
+int age = 20;
+
+string message = "Hello World;
+
+print(message);
+print(age)

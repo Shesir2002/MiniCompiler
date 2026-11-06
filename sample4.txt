@@ -1,0 +1,19 @@
+int x = 10;
+int y = 20;
+int sum = x + y;
+
+float average = 85.5;
+bool passed = true;
+
+if (sum > 20 && passed) {
+    print("Success");
+} else {
+    print("Failed");
+}
+
+int i = 1;
+
+while (i <= 3) {
+    print(i);
+    i = i + 1;
+}

@@ -1,0 +1,23 @@
+int x = 15;
+int y = 5;
+int result = x / y;
+
+float price = 99.5;
+string name = "Laptop";
+bool available = true;
+
+if (result == 3) {
+    print(name);
+    print(price);
+} else {
+    print("Not found");
+}
+
+int count = 1;
+
+do {
+    print(count);
+    count = count + 1;
+} while (count <= 3);
+
+print(available);
