@@ -136,7 +136,13 @@ function App() {
     setOutput('Compiling via ./mini_compiler.exe ...');
 
     try {
-      const response = await fetch('http://localhost:3001/compile', {
+      // const response = await fetch('http://localhost:3001/compile', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ code }),
+      // });
+
+      const response = await fetch('https://minicompiler-zig0.onrender.com/compile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ code }),

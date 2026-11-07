@@ -53,9 +53,21 @@ int main(int argc, char* argv[])
     SemanticAnalyzer analyzer;
     int semanticErrors = analyzer.analyze(programStatements);
 
+
     if (semanticErrors > 0) {
         std::cout << "Compilation failed during semantic analysis.\n";
         return 1;
+    }
+
+    std::cout << "\nSemantic analysis successful!\n";
+
+    // --- EXECUTE PROGRAM & PRINT OUTPUT ---
+    std::cout << "\n--- Program Output ---\n";
+    getSymbolTable().clear(); // Reset variables per run
+    for (const auto& stmt : programStatements) {
+        if (stmt) {
+            stmt->execute();
+        }
     }
 
     std::cout << "\nCompilation successful!\n";
