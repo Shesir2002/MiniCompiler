@@ -25,6 +25,8 @@ int syntax_errors = 0;
 
 %define parse.error verbose
 
+
+
 %union {
     char *text;
     DataType dataType;
