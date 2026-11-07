@@ -59,8 +59,6 @@ int main(int argc, char* argv[])
         return 1;
     }
 
-    std::cout << "\nSemantic analysis successful!\n";
-
     // --- EXECUTE PROGRAM & PRINT OUTPUT ---
     std::cout << "\n--- Program Output ---\n";
     getSymbolTable().clear(); // Reset variables per run

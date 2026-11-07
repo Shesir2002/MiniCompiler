@@ -1,0 +1,19 @@
+# Node dependencies & builds
+node_modules/
+client/node_modules/
+client/dist/
+
+# Compiled C++ binaries (Windows & Linux)
+mini_compiler.exe
+mini_compiler
+
+# Flex and Bison generated temporary source files
+lex.yy.c
+parser.tab.c
+parser.tab.h
+parser.tab.o
+lex.yy.o
+main.o
+
+# Runtime temp files
+temp_input.txt

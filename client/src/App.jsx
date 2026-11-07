@@ -148,6 +148,12 @@ function App() {
         body: JSON.stringify({ code }),
       });
 
+      // const response = await fetch('http://localhost:3001/compile', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ code }),
+      // });
+
       const data = await response.json();
       setOutput(data.output || 'No output generated.');
     } catch (err) {
